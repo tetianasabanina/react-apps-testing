@@ -1,17 +1,25 @@
-import React from 'react';
+import React, {Component} from 'react';
 import './Main.css';
-import Box from '../Box/Box.js';
+import Box from '../Box/Box';
 
-const clickHandler = () => {
-    console.log("Terve!");
-}
-const Main = () => {
-    return (
-        <div className='main'>
-           
-                <h2>Main component</h2>
-                
-                <button onClick={clickHandler}>Click Me</button>
+class Main extends Component {
+
+    state = {
+        persons: [ 
+            {name: "Mari", title: "Designer", age: 30},
+            {name: "Moira", title: "Technolog", age: 38},
+            {name: "Petr", title: "Haker", age: 25},
+        ]
+    }
+    clickHandler = () => {
+        console.log('wow');
+    }
+    
+      render () {
+        return (
+            <div className='Main'>
+        
+                <button onClick={this.clickHandler}>Click Me</button>
             
                 <div>
                     <Box />
@@ -19,8 +27,9 @@ const Main = () => {
                     <Box />
                 </div>
 
-        </div>
-    );
+            </div>
+        );
+    }
 }
 
 export default Main;
