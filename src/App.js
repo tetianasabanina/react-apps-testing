@@ -1,11 +1,11 @@
-import React, {Component} from 'react'; // class-based component
+ // class-based component
 // import React from 'react'; // function-based component
 // import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import './App.css';
 import Header from './Components/Header/Header';
 import Main from './Components/Main/Main';
 import Footer from './Components/Footer/Footer';
-
+import React, {Component} from 'react';
 // class-based component
 class App extends Component {
   state = {
